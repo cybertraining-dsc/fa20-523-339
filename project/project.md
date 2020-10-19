@@ -1,4 +1,5 @@
-#Big Data Application in E-commerce——Customer Behavior analysis and recommendation
+# Big Data Application in E-commerce
+
 Big data have many applications in the scientific research and business, from those in the hardware perspective like Higgs Discovery to the software perspective like E-commence. In these aspects, I am mostly interested in big data application in the business especially in the area where using big data to analysis customer behavior and then make a recommendation strategy to induce customers purchase the best fit-in goods. The recommendation strategies and customer behavior analysis are now playing the key role for all E-commerce competitiveness and be highly valued and researched by scientists around the world. It could be quite difficult to make a breakthrough in this area. However, I still would like to make a taste on it by using Amazon’s multiple datasets to see what the strategies will be. The project will be finished by myself with a couple Datasets provided by Amazon stated following.
 
 The major dataset will be Amazon review Data (2018) attributed by Julian (2019), with a preference of Gift card category. The reason for sub-category and limited it to only Gift card is to prevent the overcome of extremely low data processing. Since This dataset is an extremely large dataset, it will be almost impossible to train it in personal computers and the dataset is originated by only containing the “also views” and “also buys” from the same category. Therefore, the dataset for the gift card category have 1548 products with 147,194 reviews can be good option for the project. The key data attributes will be use is including the specific identification number for each product, the “also views” and “also buys” for the major comparison, as well as lasting time, title brand, similar item, price, shipping and ranking for the further reference and research. The dataset chosen will be granted by the authorization from its author, which is already finished by email and google sheet. Besides, it will be possible to present the algorithm and findings in another sub-category like Software to determine the overall efforts applicable.
@@ -8,7 +9,7 @@ The early estimation for the highest achievement for work difficulty and observa
 In short, this project will be work alone with a topic of Big Data Application in E-commerce——Customer Behavior analysis and recommendation. The dataset will be using is Amazon Product Review data (2018), with the reference and copyright below. The estimation for great grade will be an error-free python system with a detailed analysis report for the key attribution in Customer Behavior in E-commerce and will able to provide an idea to business about how to recommend customer for best fit goods.
 
 
-Reference: 
+### Reference: 
 Justifying recommendations using distantly-labeled reviews and fined-grained aspects. Jianmo Ni, Jiacheng Li, Julian McAuley. Empirical Methods in Natural Language Processing (EMNLP), 2019.
 
 
