@@ -1,6 +1,12 @@
 # Big Data Application in E-commerce
 
+<<<<<<< HEAD
 Tao Liu, [fa20-523-339](https://github.com/cybertraining-dsc/fa20-523-339/), [Edit](https://github.com/cybertraining-dsc/fa20-523-339/blob/master/project/project.md)
+=======
+- [ ] please use our template
+
+Big data have many applications in the scientific research and business, from those in the hardware perspective like Higgs Discovery to the software perspective like E-commence. In these aspects, I am mostly interested in big data application in the business especially in the area where using big data to analysis customer behavior and then make a recommendation strategy to induce customers purchase the best fit-in goods. The recommendation strategies and customer behavior analysis are now playing the key role for all E-commerce competitiveness and be highly valued and researched by scientists around the world. It could be quite difficult to make a breakthrough in this area. However, I still would like to make a taste on it by using Amazon’s multiple datasets to see what the strategies will be. The project will be finished by myself with a couple Datasets provided by Amazon stated following.
+>>>>>>> 7053bba1f70616cbdc303a3954804532b3ca23bc
 
 {{% pageinfo %}}
 
@@ -11,6 +17,7 @@ Contents
 
 {{< table_of_contents >}}
 
+<<<<<<< HEAD
 {{% /pageinfo %}}
 
 **Keywords:** data analysis, business, big data, E-commerce, customer behavior 
@@ -50,5 +57,10 @@ The author would like to thank Dr. Gregor Von Laszewski, Dr. Geoffrey Fox, and t
 [^1]: 
 
 Justifying recommendations using distantly-labeled reviews and fined-grained aspects. Jianmo Ni, Jiacheng Li, Julian McAuley. Empirical Methods in Natural Language Processing (EMNLP), 2019.. <http://jmcauley.ucsd.edu/data/amazon/>
+=======
+## Reference
+
+Justifying recommendations using distantly-labeled reviews and fined-grained aspects. Jianmo Ni, Jiacheng Li, Julian McAuley. Empirical Methods in Natural Language Processing (EMNLP), 2019.
+>>>>>>> 7053bba1f70616cbdc303a3954804532b3ca23bc
 
 
