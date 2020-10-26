@@ -58,9 +58,6 @@ The author would like to thank Dr. Gregor Von Laszewski, Dr. Geoffrey Fox, and t
 
 Justifying recommendations using distantly-labeled reviews and fined-grained aspects. Jianmo Ni, Jiacheng Li, Julian McAuley. Empirical Methods in Natural Language Processing (EMNLP), 2019.. <http://jmcauley.ucsd.edu/data/amazon/>
 =======
-## Reference
 
-Justifying recommendations using distantly-labeled reviews and fined-grained aspects. Jianmo Ni, Jiacheng Li, Julian McAuley. Empirical Methods in Natural Language Processing (EMNLP), 2019.
->>>>>>> 7053bba1f70616cbdc303a3954804532b3ca23bc
 
 
