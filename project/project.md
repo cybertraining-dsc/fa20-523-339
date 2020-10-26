@@ -5,7 +5,6 @@ Tao Liu, [fa20-523-339](https://github.com/cybertraining-dsc/fa20-523-339/), [Ed
 =======
 - [ ] please use our template
 
-Big data have many applications in the scientific research and business, from those in the hardware perspective like Higgs Discovery to the software perspective like E-commence. In these aspects, I am mostly interested in big data application in the business especially in the area where using big data to analysis customer behavior and then make a recommendation strategy to induce customers purchase the best fit-in goods. The recommendation strategies and customer behavior analysis are now playing the key role for all E-commerce competitiveness and be highly valued and researched by scientists around the world. It could be quite difficult to make a breakthrough in this area. However, I still would like to make a taste on it by using Amazon’s multiple datasets to see what the strategies will be. The project will be finished by myself with a couple Datasets provided by Amazon stated following.
 >>>>>>> 7053bba1f70616cbdc303a3954804532b3ca23bc
 
 {{% pageinfo %}}
@@ -23,7 +22,10 @@ Contents
 **Keywords:** data analysis, business, big data, E-commerce, customer behavior 
 
 ## 1. Introduction
-For the final project, I will focus on use the customer review data to perform data analysis technology and then use different machine learning methods to give customers' recommendation products based on the data. A feature is that this work will try to use different machine learning technologies which can be able to see how exactly a recommendation will be make in E-commerce area
+
+Big data have many applications in the scientific research and business, from those in the hardware perspective like Higgs Discovery to the software perspective like E-commence. In these aspects, I am mostly interested in big data application in the business especially in the area where using big data to analysis customer behavior and then make a recommendation strategy to induce customers purchase the best fit-in goods. The recommendation strategies and customer behavior analysis are now playing the key role for all E-commerce competitiveness and be highly valued and researched by scientists around the world. It could be quite difficult to make a breakthrough in this area. However, I still would like to make a taste on it by using Amazon’s multiple datasets to see what the strategies will be. The project will be finished by myself with a couple Datasets provided by Amazon stated following.
+
+In the final project, I will focus on use the customer review data to perform data analysis technology and then use different machine learning methods to give customers' recommendation products based on the data. A feature is that this work will try to use different machine learning technologies which can be able to see how exactly a recommendation will be make in E-commerce area
 
 
 ## 2. Choice of Data-sets
@@ -33,6 +35,7 @@ Upon exploring a wide array of available datasets, I will be using the dataset c
 
    
 ## 3. Methodology
+
 The first step will data collection and data cleaning. The second step will be use data to perform machine learning methods and strech several visualizations based on that. The final step is using the data to mimic a real-world recommendations products within a random-selected dataset. The final result and overall correctness will be recorded for the conclusion. 
 
 ##Outline of plan
