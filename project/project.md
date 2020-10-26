@@ -36,8 +36,8 @@ Upon exploring a wide array of available datasets, I will be using the dataset c
 The first step will data collection and data cleaning. The second step will be use data to perform machine learning methods and strech several visualizations based on that. The final step is using the data to mimic a real-world recommendations products within a random-selected dataset. The final result and overall correctness will be recorded for the conclusion. 
 
 ##Outline of plan
-- Week 9-Week 10 Clean and process the data for the project
-- Week 10-Week 11 Implement Machine Learning Methods
+- Week 9-Week 10 Clean and process the data for the project -finished
+- Week 10-Week 11 Implement Machine Learning Methods - KNN implemented and waiting for the useage
 - Week 11- Week 12 Build the recommendation strategies
 
 ## 5. Inference
