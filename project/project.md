@@ -7,6 +7,7 @@ Tao Liu, [fa20-523-339](https://github.com/cybertraining-dsc/fa20-523-339/), [Ed
 {{% pageinfo %}}
 
 ## Abstract
+
 With 
 
 GREGOR HHHHHHHHHH
@@ -38,10 +39,6 @@ Upon exploring a wide array of available datasets, I will be using the dataset c
 
 The first step will data collection and data cleaning. The second step will be use data to perform machine learning methods and strech several visualizations based on that. The final step is using the data to mimic a real-world recommendations products within a random-selected dataset. The final result and overall correctness will be recorded for the conclusion. 
 
-##Outline of plan
-- Week 9-Week 10 Clean and process the data for the project -finished
-- Week 10-Week 11 Implement Machine Learning Methods - KNN implemented and waiting for the useage
-- Week 11- Week 12 Build the recommendation strategies
 
 ## 5. Inference
 
@@ -54,6 +51,12 @@ This section will be addressed upon project completion.
 ## 7. Acknowledgements
 
 The author would like to thank Dr. Gregor Von Laszewski, Dr. Geoffrey Fox, and the associate instructors in the *FA20-BL-ENGR-E534-11530: Big Data Applications* course (offered in the Fall 2020 semester at Indiana University, Bloomington) for their continued assistance and suggestions with regard to exploring this idea and also for their aid with preparing the various drafts of this article.
+
+## Plan
+
+- Week 9-Week 10 Clean and process the data for the project -finished
+- Week 10-Week 11 Implement Machine Learning Methods - KNN implemented and waiting for the useage
+- Week 11- Week 12 Build the recommendation strategies
 
 ## 8. References
 
