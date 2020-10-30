@@ -1,11 +1,8 @@
 # Big Data Application in E-commerce
 
-<<<<<<< HEAD
 Tao Liu, [fa20-523-339](https://github.com/cybertraining-dsc/fa20-523-339/), [Edit](https://github.com/cybertraining-dsc/fa20-523-339/blob/master/project/project.md)
-=======
-- [ ] please use our template
 
->>>>>>> 7053bba1f70616cbdc303a3954804532b3ca23bc
+- [ ] please use refernces
 
 {{% pageinfo %}}
 
@@ -16,7 +13,6 @@ Contents
 
 {{< table_of_contents >}}
 
-<<<<<<< HEAD
 {{% /pageinfo %}}
 
 **Keywords:** data analysis, business, big data, E-commerce, customer behavior 
@@ -59,7 +55,6 @@ The author would like to thank Dr. Gregor Von Laszewski, Dr. Geoffrey Fox, and t
 
 [^1]: Justifying recommendations using distantly-labeled reviews and fined-grained aspects. Jianmo Ni, Jiacheng Li, Julian McAuley. Empirical Methods in Natural Language Processing (EMNLP), 2019.. <http://jmcauley.ucsd.edu/data/amazon/>
 
-=======
 
 
 
