@@ -7,7 +7,9 @@ Tao Liu, [fa20-523-339](https://github.com/cybertraining-dsc/fa20-523-339/), [Ed
 {{% pageinfo %}}
 
 ## Abstract
+
 With the passage of time, the online shopping and E-commerce have now become one of the most popular events for citizen's life and society. Millions of goods are now sale online to the customers all over the world. With the 5G technology's implementation is inevitable. These activities will create millions of data about customer's behaviors like how they value products, how they purchase or sale the products and how they review for the goods purchase. These data will have a tremendous contribution for corporations to analyze. These data can not only help convince the current strategies of the E-commerce is on a right track, but also a potential way to see which step E-commerce can make up for attracting more customers to buy the goods. At the same time, these data can also be implemented as a way for recommendation strategies for E-commerce. It will help customers find the next products they like in a short period by implementing machine learning technology on Big Data. The corporations can also enjoy the increase of sale and potential of more attraction for recommendation strategies. A better recommendation strategy as well as better data analysis strategies on E-commerce are now the new trend for massive data scientists and researchers’ target. Therefore, this field is now one the most popular research area in the data science fields. 
+
 
 Contents
 
@@ -34,10 +36,6 @@ Upon exploring a wide array of available datasets, I will be using the dataset c
 
 The first step will data collection and data cleaning. The second step will be use data to perform machine learning methods and strech several visualizations based on that. The final step is using the data to mimic a real-world recommendations products within a random-selected dataset. The final result and overall correctness will be recorded for the conclusion. 
 
-##Outline of plan
-- Week 9-Week 10 Clean and process the data for the project -finished
-- Week 10-Week 11 Implement Machine Learning Methods - KNN implemented and waiting for the useage
-- Week 11- Week 12 Build the recommendation strategies
 
 ## 5. Inference
 
@@ -50,6 +48,12 @@ This section will be addressed upon project completion.
 ## 7. Acknowledgements
 
 The author would like to thank Dr. Gregor Von Laszewski, Dr. Geoffrey Fox, and the associate instructors in the *FA20-BL-ENGR-E534-11530: Big Data Applications* course (offered in the Fall 2020 semester at Indiana University, Bloomington) for their continued assistance and suggestions with regard to exploring this idea and also for their aid with preparing the various drafts of this article.
+
+## Plan
+
+- Week 9-Week 10 Clean and process the data for the project -finished
+- Week 10-Week 11 Implement Machine Learning Methods - KNN implemented and waiting for the useage
+- Week 11- Week 12 Build the recommendation strategies
 
 ## 8. References
 
