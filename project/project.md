@@ -27,8 +27,7 @@ In the final project, I will focus on use the customer review data to perform da
 
 
 ## 2. Choice of Data-sets
-
-Upon exploring a wide array of available datasets, I will be using the dataset called from Amazon Review Data. Particularly, since the dataset is now reach billions of amount, I will use the subcategery gift card as an example, since the overall product type is closed to 2000 and the amount of data retrieved is currently in the right amount of training and testing. This fact can help to see if the machine learning strategies work in the cases. 
+The dataset for this study is called *Amazon Review Data* [^1]. Particularly, since the dataset is now reach billions of amount,the subcategery gift card will be used as an example, since the overall product type is closed to 2000 and the amount of data retrieved is currently in the right amount of training and testing. This fact can help to see if the machine learning strategies work in the cases. 
 
 
    
