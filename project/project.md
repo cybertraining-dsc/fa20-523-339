@@ -5,6 +5,7 @@
 Tao Liu, [fa20-523-339](https://github.com/cybertraining-dsc/fa20-523-339/), [Edit](https://github.com/cybertraining-dsc/fa20-523-339/blob/master/project/project.md)
 
 - [ ] please use refernces
+- [ ] Please add an empty line after a heading
 
 {{% pageinfo %}}
 
@@ -29,6 +30,7 @@ In the final project, I will focus on use the customer review data to perform da
 
 
 ## 2. Choice of Data-sets
+
 The dataset for this study is called *Amazon Review Data* [^1]. Particularly, since the dataset is now reach billions of amount,the subcategery gift card will be used as an example, since the overall product type is closed to 2000 and the amount of data retrieved is currently in the right amount of training and testing. This fact can help to see if the machine learning strategies work in the cases. 
 
 
