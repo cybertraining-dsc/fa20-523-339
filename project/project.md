@@ -17,10 +17,10 @@ As a result of last twenty year's Internet development in the global, E-commerce
 
 Contents
 
-{{< table_of_contents >}}
-1. Introduction
+{{1. Introduction
 2. Background
-3. Choice of Dataset
+3. Choice of Dataset}}
+
 {{% /pageinfo %}}
 
 **Keywords:** recommendation strategy,collaborative filtering, business, big data, E-commerce, customer behavior 
