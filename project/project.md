@@ -17,9 +17,7 @@ As a result of last twenty year's Internet development in the global, E-commerce
 
 Contents
 
-{{1. Introduction
-2. Background
-3. Choice of Dataset}}
+{{table of content}}
 
 {{% /pageinfo %}}
 
