@@ -17,7 +17,7 @@ As a result of last twenty year's Internet development in the global, E-commerce
 
 Contents
 
-{{table of content}}
+{{< 1.Introduction >}}
 
 {{% /pageinfo %}}
 
