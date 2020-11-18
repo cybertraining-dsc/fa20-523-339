@@ -61,15 +61,14 @@ This section will be addressed upon project completion.
 
 The author would like to thank Dr. Gregor Von Laszewski, Dr. Geoffrey Fox, and the associate instructors in the *FA20-BL-ENGR-E534-11530: Big Data Applications* course (offered in the Fall 2020 semester at Indiana University, Bloomington) for their continued assistance and suggestions with regard to exploring this idea and also for their aid with preparing the various drafts of this article.
 
-
 ## 8. References
 
-[^1]: Build a Recommendation Engine With Collaborative Filtering. Ajitsaria, A. 2020.. 
+[^1]: Build a Recommendation Engine With Collaborative Filtering. Ajitsaria, A. 2020 
       <https://realpython.com/build-recommendation-engine-collaborative-filtering/>
 
-[^2]: Justifying recommendations using distantly-labeled reviews and fined-grained aspects. Jianmo Ni, Jiacheng Li, Julian McAuley. Empirical Methods in Natural Language Processing (EMNLP), 2019.. <http://jmcauley.ucsd.edu/data/amazon/>
+[^2]: Justifying recommendations using distantly-labeled reviews and fined-grained aspects. Jianmo Ni, Jiacheng Li, Julian McAuley. Empirical Methods in Natural Language Processing (EMNLP), 2019 <http://jmcauley.ucsd.edu/data/amazon/>
 
-[^3]: meta_Gift_Cards.json.gz.. <http://deepyeti.ucsd.edu/jianmo/amazon/metaFiles/meta_Gift_Cards.json.gz>
+[^3]: meta_Gift_Cards.json.gz <http://deepyeti.ucsd.edu/jianmo/amazon/metaFiles/meta_Gift_Cards.json.gz>
 
 
 
