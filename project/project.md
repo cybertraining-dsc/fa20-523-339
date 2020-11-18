@@ -63,7 +63,7 @@ The author would like to thank Dr. Gregor Von Laszewski, Dr. Geoffrey Fox, and t
 
 ## 8. References
 
-[^1]: Build a Recommendation Engine With Collaborative Filtering. Ajitsaria, A. 2020 
+[^1]: Build a Recommendation Engine With Collaborative Filtering Ajitsaria, A 2020 
       <https://realpython.com/build-recommendation-engine-collaborative-filtering/>
 
 [^2]: Justifying recommendations using distantly-labeled reviews and fined-grained aspects. Jianmo Ni, Jiacheng Li, Julian McAuley. Empirical Methods in Natural Language Processing (EMNLP), 2019 <http://jmcauley.ucsd.edu/data/amazon/>
