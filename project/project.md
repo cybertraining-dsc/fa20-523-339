@@ -73,27 +73,27 @@ Here since the attributes *category*, *main_cat* are the same for the whole data
 
 Here is a shortcut for the raw database:
 
-![image info](./pictures/raw_database.png)
+![image info](./images/raw_database.png)
 
 For the training purpose, all asins appeared in the dataset, either from *also_buy & also_view* list or * asin* have to be reformatted from alphabet character to numeric character. Therefore, a reformat_asin function is called for reformatting all the asins appeared in the dataset and is performed as a dictionary. 
 
 A shortcut for the *Asin Dictionary* is like the following:
 
-![image info](./pictures/asin_dictionary.png)
+![image info](./images/asin_dictionary.png)
 
 Then the data contained in the each record's attributes: **also_view** & **also_buy** will be reformated as following:
 
-![image info](./pictures/asin_view_list.png)
+![image info](./images/also_view_list.png)
 
-![image info](./pictures/asin_buy_list.png)
+![image info](./images/also_buy_list.png)
 
 A dictionary of the asin's relationship with particular record in also_view is recorded. An example from item 2000 to 2020 is showingas following.
 
-![image info](./pictures/asin_view_dict.png)
+![image info](./images/also_view_dict.png)
 
 A dictionary of the asin's relationship with particular record in also_buy is also recorded. An example from item 2000 to 2020 is showingas following.
 
-![image info](./pictures/asin_buy_dict.png)
+![image info](./images/also_buy_dict.png)
 
 ## 5. Recommendation Rate Calculation
 
