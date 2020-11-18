@@ -12,7 +12,7 @@ Tao Liu, [fa20-523-339](https://github.com/cybertraining-dsc/fa20-523-339/), [Ed
 
 ## Abstract
 
-As a result of last twenty year's Internet development in the global, E-commerce industry is getting stronger and stronger. While customers enjoyed their convenient online purchase environment, the E-commerce see the potential for the data and information customer left during their online-shopping process. One fundamental usage for this information is to perform Recommendation Strategy to give customer potential products they would also like to purchase.  This report will try to build a User-Based Collaborative Filtering strategy to give customer recommendation products based on the database of previous customer purchase records. This report will start with an overview for the background and then an expansion for the dataset it chosen *Amazon Review Data* [^1]. After that each step for the code and step made in a corresponding file *Big_tata_Application_in_E_commense.ipynb* will be illustrated and the User-Based Collaborative Filtering strategy will be presented step by step.
+As a result of last twenty year's Internet development in the global, E-commerce industry is getting stronger and stronger. While customers enjoyed their convenient online purchase environment, the E-commerce see the potential for the data and information customer left during their online-shopping process. One fundamental usage for this information is to perform Recommendation Strategy to give customer potential products they would also like to purchase.  This report will try to build a User-Based Collaborative Filtering strategy to give customer recommendation products based on the database of previous customer purchase records. This report will start with an overview for the background and then an expansion for the dataset it chosen *Amazon Review Data*. After that each step for the code and step made in a corresponding file *Big_tata_Application_in_E_commense.ipynb* will be illustrated and the User-Based Collaborative Filtering strategy will be presented step by step.
 
 
 Contents
@@ -31,12 +31,12 @@ In this final project, An User-Based Collaborative Filtering Strategy will be im
 
 ## 2. Background
 
-Recommendation Strategy is a quite popular research area in recent years with a strong real-world influence. It is largely used in E-commerse platform like Taobao, Amazon,etc. Therefore, It is obvious that there are plenty of recommendation strategy have been done. Though every E-commerse's recommendation algorithm may be different with each other, the most poplular techique for recommendation systems is called Collaborative Filtering. It is a techique that can filter out items that a user might like on the basis of reactions by similar users. During this techique, the memory-based method is considered in this report since it uses dataset to calculate the prediction by using statistical techniques. This strategy will be able to fulfill in local environment with a proper dataset. There are two kinds of memory-based method available in the market: *User-Based Collaborative Filtering*, *Item-Based Collaborative Filtering*.[^2] This project will be only focus on User-Based Collaborative Filtering Strategy since Item-Based Collaborative Filtering requires a customer review rate for evaluation. The dataset available in the market does not have that attribute and therefore be unlikely to implement in that way. 
+Recommendation Strategy is a quite popular research area in recent years with a strong real-world influence. It is largely used in E-commerse platform like Taobao, Amazon,etc. Therefore, It is obvious that there are plenty of recommendation strategy have been done. Though every E-commerse's recommendation algorithm may be different with each other, the most poplular techique for recommendation systems is called Collaborative Filtering. It is a techique that can filter out items that a user might like on the basis of reactions by similar users. During this techique, the memory-based method is considered in this report since it uses dataset to calculate the prediction by using statistical techniques. This strategy will be able to fulfill in local environment with a proper dataset. There are two kinds of memory-based method available in the market: *User-Based Collaborative Filtering*, *Item-Based Collaborative Filtering*.[^1] This project will be only focus on User-Based Collaborative Filtering Strategy since Item-Based Collaborative Filtering requires a customer review rate for evaluation. The dataset available in the market does not have that attribute and therefore be unlikely to implement in that way. 
 
 ## 3. Choice of Data-sets
 
 
-The dataset for this study is called *Amazon Review Data* [^1]. Particularly, since the dataset is now reach billions of amount,the subcategery gift card will be used as an example, since the overall product type is closed to 2000 and the amount of data retrieved is currently in the right amount of training and testing. This fact can help to perform User-Based Collaborative Filtering in a control timeline.
+The dataset for this study is called *Amazon Review Data* [^2]. Particularly, since the dataset is now reach billions of amount,the subcategery gift card will be used as an example, since the overall product type is closed to 2000 and the amount of data retrieved is currently in the right amount of training and testing. This fact can help to perform User-Based Collaborative Filtering in a control timeline.
 
 
 
@@ -65,10 +65,9 @@ The author would like to thank Dr. Gregor Von Laszewski, Dr. Geoffrey Fox, and t
 
 ## 8. References
 
+[^1]: Build a Recommendation Engine With Collaborative Filtering. Ajitsaria, A. 2020.. <https://realpython.com/build-recommendation-engine-collaborative-filtering/>
 
-[^1]: Justifying recommendations using distantly-labeled reviews and fined-grained aspects. Jianmo Ni, Jiacheng Li, Julian McAuley. Empirical Methods in Natural Language Processing (EMNLP), 2019.. <http://jmcauley.ucsd.edu/data/amazon/>
-
-[^2]: Build a Recommendation Engine With Collaborative Filtering. Ajitsaria, A. 2020.. <https://realpython.com/build-recommendation-engine-collaborative-filtering/>
+[^2]: Justifying recommendations using distantly-labeled reviews and fined-grained aspects. Jianmo Ni, Jiacheng Li, Julian McAuley. Empirical Methods in Natural Language Processing (EMNLP), 2019.. <http://jmcauley.ucsd.edu/data/amazon/>
 
 [^3]: meta_Gift_Cards.json.gz.. <http://deepyeti.ucsd.edu/jianmo/amazon/metaFiles/meta_Gift_Cards.json.gz>
 
