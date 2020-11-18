@@ -4,10 +4,6 @@
 - [ ] Please add an empty line after a heading
 
 [![Check Report](https://github.com/cybertraining-dsc/fa20-523-339/workflows/Check%20Report/badge.svg)](https://github.com/cybertraining-dsc/fa20-523-339/actions)
-[![Status](https://github.com/cybertraining-dsc/fa20-523-339/workflows/Status/badge.svg)](https://github.com/cybertraining-dsc/fa20-523-339/actions)
-Status: in progress
-
-        
 
 Tao Liu, [fa20-523-339](https://github.com/cybertraining-dsc/fa20-523-339/), [Edit](https://github.com/cybertraining-dsc/fa20-523-339/blob/main/project/project.md)
 
@@ -47,26 +43,54 @@ The dataset for this study is called *Amazon Review Data* [^2]. Particularly, si
 
 
 The first step will be data collection and data cleaning. The raw data-set is imported directly from data-set contributors' online storage *meta_Gift_Cards.json.gz* [^3] to Google Colab notebook. The raw database retreived directly from the website will be the following:
-|  Attribute   | Description                    |  Example                          |
-|  category    | The category of the record     | \[\"Gift Cards", "Gift Cards"\]\  |
-|  tech1      | tech relate to it               | "" |
-|  description | The description of the product |"Gift card for the purchase of goods..." |
-|  fit         | fit for its record             |"" |
-|  title       | title for the product          |"Serendipity 3 $100.00 Gift Card" |
-| **also_buy** | the product also bought        |\[\"B005ESMEBQ"\]\ |
-|  image       | image of the gift card         |"" |
-|  tech2       | tech relate to it              |"" |
-|  brand       | brand of the product           |"Amazon" |
-|  feature     | feature of the product         |"Amazon.com Gift cards never expire" |
-|  rank        | rank of the product            |"" |
-| **also_view**| the product also view          |\[\"BT00DC6QU4"\]\ |
-|  details     | detail for the product         |"3.4 x 2.1 inches ; 1.44 ounces" |
-|  main_cat    | main category of the product   |"Grocery" |
-|  similar_item| similar_item of the product    |"" |
-|  date        | date of the product assigned   |"" |
-|  price       | price of the product           |"" |
-|  asin        | product asin code              |"B001BKEWF2" |
 
+
+|  Attribute   | Description                    |  Example                                |
+| :-----------:| :-----------------------------:|:---------------------------------------:|
+|  category    | The category of the record     | \[\"Gift Cards", "Gift Cards"\]\        |
+|  tech1       | tech relate to it              | ""                                      |
+|  description | The description of the product |"Gift card for the purchase of goods..." |
+|  fit         | fit for its record             |""                                       |
+|  title       | title for the product          |"Serendipity 3 $100.00 Gift Card"        |
+| **also_buy** | the product also bought        |\[\"B005ESMEBQ"\]\                       |
+|  image       | image of the gift card         |""                                       |
+|  tech2       | tech relate to it              |""                                       |
+|  brand       | brand of the product           |"Amazon"                                 |
+|  feature     | feature of the product         |"Amazon.com Gift cards never expire"     |
+|  rank        | rank of the product            |""                                       |
+| **also_view**| the product also view          |\[\"BT00DC6QU4"\]\                       |
+|  details     | detail for the product         |"3.4 x 2.1 inches ; 1.44 ounces"         |
+|  main_cat    | main category of the product   |"Grocery"                                |
+|  similar_item| similar_item of the product    |""                                       |
+|  date        | date of the product assigned   |""                                       |
+|  price       | price of the product           |""                                       |
+|  **asin**    | product asin code              |"B001BKEWF2"                             |
+
+Here since the attributes *category*, *main_cat* are the same for the whole dataset,they will not be a valid training labels. The attributes *tech1*, *fit*, *tech2*, *rank*, *similar_item*, *date*, *price*  have no/ extremely less filled in. That made them also unvalid for being training labels.The attributes *image*, *description* and *feature* is unique per item and hard to find the similarity in numeric purpose and then hard to be used as labels. Therefore, only attributes **also_buy**,  **also_view**, **asin** is trained as attributes and label in this algorithm.
+
+Here is a shortcut for the raw database:
+
+![image info](./pictures/raw_database.png)
+
+For the training purpose, all asins appeared in the dataset, either from *also_buy & also_view* list or * asin* have to be reformatted from alphabet character to numeric character. Therefore, a reformat_asin function is called for reformatting all the asins appeared in the dataset and is performed as a dictionary. 
+
+A shortcut for the *Asin Dictionary* is like the following:
+
+![image info](./pictures/asin_dictionary.png)
+
+Then the data contained in the each record's attributes: **also_view** & **also_buy** will be reformated as following:
+
+![image info](./pictures/asin_view_list.jpeg)
+
+![image info](./pictures/asin_buy_list.jpeg)
+
+A dictionary of the asin's relationship with particular record in also_view is recorded. An example from item 2000 to 2020 is showingas following.
+
+![image info](./pictures/asin_view_dict.jpeg)
+
+A dictionary of the asin's relationship with particular record in also_buy is also recorded. An example from item 2000 to 2020 is showingas following.
+
+![image info](./pictures/asin_buy_dict.jpeg)
 
 ## 5. Recommendation Rate Calculation
 
@@ -85,11 +109,11 @@ The author would like to thank Dr. Gregor Von Laszewski, Dr. Geoffrey Fox, and t
 ## 8. References
 
 [^1]: Build a Recommendation Engine With Collaborative Filtering Ajitsaria, A 2020 
-      <https://realpython.com/build-recommendation-engine-collaborative-filtering/>
+      <https://realpython.com/build-recommendation-engine-collaborative-filtering/> \[\Accessed: 15- Nov- 2020\]\.
 
-[^2]: Justifying recommendations using distantly-labeled reviews and fined-grained aspects. Jianmo Ni, Jiacheng Li, Julian McAuley. Empirical Methods in Natural Language Processing (EMNLP), 2019 <http://jmcauley.ucsd.edu/data/amazon/>
+[^2]: Justifying recommendations using distantly-labeled reviews and fined-grained aspects. Jianmo Ni, Jiacheng Li, Julian McAuley. Empirical Methods in Natural Language Processing (EMNLP), 2019 <http://jmcauley.ucsd.edu/data/amazon/> \[\Accessed: 15- Nov- 2020\]\.
 
-[^3]: meta_Gift_Cards.json.gz <http://deepyeti.ucsd.edu/jianmo/amazon/metaFiles/meta_Gift_Cards.json.gz>
+[^3]: meta_Gift_Cards.json.gz <http://deepyeti.ucsd.edu/jianmo/amazon/metaFiles/meta_Gift_Cards.json.gz> \[\Accessed: 15- Nov- 2020\]\.
 
 
 
