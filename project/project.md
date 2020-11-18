@@ -2,9 +2,9 @@
 
 - [ ] please use refernces
 - [ ] Please add an empty line after a heading
+- [ ] please follow oure template, see image inclusions, fix errors reported by report check script
 
 [![Check Report](https://github.com/cybertraining-dsc/fa20-523-339/workflows/Check%20Report/badge.svg)](https://github.com/cybertraining-dsc/fa20-523-339/actions)
-
 [![Status](https://github.com/cybertraining-dsc/fa20-523-312/workflows/Status/badge.svg)](https://github.com/cybertraining-dsc/fa20-523-339/actions)
 Status: in progress
 
