@@ -46,10 +46,26 @@ The dataset for this study is called *Amazon Review Data* [^2]. Particularly, si
 ## 4. Data Preprocessing and cleaning
 
 
-The first step will be data collection and data cleaning. The raw data-set is imported directly from data-set contributors' online storage *meta_Gift_Cards.json.gz* [^3] to Google Colab notebook. The raw database will be the following:
-
-
-
+The first step will be data collection and data cleaning. The raw data-set is imported directly from data-set contributors' online storage *meta_Gift_Cards.json.gz* [^3] to Google Colab notebook. The raw database retreived directly from the website will be the following:
+|  Attribute   | Description                    |  Example                          |
+|  category    | The category of the record     | \[\"Gift Cards", "Gift Cards"\]\  |
+|  tech1      | tech relate to it               | "" |
+|  description | The description of the product |"Gift card for the purchase of goods..." |
+|  fit         | fit for its record             |"" |
+|  title       | title for the product          |"Serendipity 3 $100.00 Gift Card" |
+| **also_buy** | the product also bought        |\[\"B005ESMEBQ"\]\ |
+|  image       | image of the gift card         |"" |
+|  tech2       | tech relate to it              |"" |
+|  brand       | brand of the product           |"Amazon" |
+|  feature     | feature of the product         |"Amazon.com Gift cards never expire" |
+|  rank        | rank of the product            |"" |
+| **also_view**| the product also view          |\[\"BT00DC6QU4"\]\ |
+|  details     | detail for the product         |"3.4 x 2.1 inches ; 1.44 ounces" |
+|  main_cat    | main category of the product   |"Grocery" |
+|  similar_item| similar_item of the product    |"" |
+|  date        | date of the product assigned   |"" |
+|  price       | price of the product           |"" |
+|  asin        | product asin code              |"B001BKEWF2" |
 
 
 ## 5. Recommendation Rate Calculation
