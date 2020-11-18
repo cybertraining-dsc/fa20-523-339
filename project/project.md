@@ -41,7 +41,6 @@ Recommendation Strategy is a quite popular research area in recent years with a 
 
 The dataset for this study is called *Amazon Review Data* [^2]. Particularly, since the dataset is now reach billions of amount,the subcategery gift card will be used as an example, since the overall customer record is 1547 and the amount of data retrieved is currently in the right amount of training. This fact can help to perform User-Based Collaborative Filtering in a control timeline.
 
-   
 ## 4. Data Preprocessing and cleaning
 
 
@@ -83,26 +82,31 @@ A shortcut for the *Asin Dictionary* is like the following:
 
 Then the data contained in the each record's attributes: **also_view** & **also_buy** will be reformated as following:
 
-![image info](./images/also_view_list.png)
+![image info](./images/also_view List.png)
 
-![image info](./images/also_buy_list.png)
+![image info](./images/also_buy List.png)
 
 A dictionary of the asin's relationship with particular record in also_view is recorded. An example from item 2000 to 2020 is showingas following.
 
-![image info](./images/also_view_dict.png)
+![image info](./images/also_view Dictionary.png)
 
 A dictionary of the asin's relationship with particular record in also_buy is also recorded. An example from item 2000 to 2020 is showingas following.
 
-![image info](./images/also_buy_dict.png)
+![image info](./images/also_buy Dictionary.png)
 
-## 5. Recommendation Rate Calculation
+## 5. Recommendation Rate and Similarity Calculation
 
 This section will be addressed upon project completion.
+
+![image info](./images/matrix.png)
+
+![image info](./images/similarity table.png)
 
 ## 6. Conclusion
 
-
 This section will be addressed upon project completion.
+
+![image info](./images/showcase.png)
 
 ## 7. Acknowledgements
 
