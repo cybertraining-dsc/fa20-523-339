@@ -31,7 +31,7 @@ In this final project, An User-Based Collaborative Filtering Strategy will be im
 
 ## 2. Background
 
-Recommendation Strategy is a quite popular research area in recent years with a strong real-world influence. It is largely used in E-commerse platform like Taobao, Amazon,etc. Therefore, It is obvious that there are plenty of recommendation strategy have been done. Though every E-commerse's recommendation algorithm may be different with each other, the most poplular techique for recommendation systems is called Collaborative Filtering. It is a techique that can filter out items that a user might like on the basis of reactions by similar users. During this techique, the memory-based method is considered in this report since it uses dataset to calculate the prediction by using statistical techniques. This strategy will be able to fulfill in local environment with a proper dataset. There are two kinds of memory-based method available in the market: *User-Based Collaborative Filtering*, *Item-Based Collaborative Filtering*.[^1] This project will be only focus on User-Based Collaborative Filtering Strategy since Item-Based Collaborative Filtering requires a customer review rate for evaluation. The dataset available in the market does not have that attribute and therefore be unlikely to implement in that way. 
+Recommendation Strategy is a quite popular research area in recent years with a strong real-world influence. It is largely used in E-commerse platform like Taobao, Amazon,etc. Therefore, It is obvious that there are plenty of recommendation strategy have been done. Though every E-commerse's recommendation algorithm may be different with each other, the most poplular techique for recommendation systems is called Collaborative Filtering. It is a techique that can filter out items that a user might like on the basis of reactions by similar users. During this techique, the memory-based method is considered in this report since it uses dataset to calculate the prediction by using statistical techniques. This strategy will be able to fulfill in local environment with a proper dataset. There are two kinds of memory-based method available in the market: *User-Based Collaborative Filtering*, *Item-Based Collaborative Filtering* [^1]. This project will be only focus on User-Based Collaborative Filtering Strategy since Item-Based Collaborative Filtering requires a customer review rate for evaluation. The dataset available in the market does not have that attribute and therefore be unlikely to implement in that way. 
 
 ## 3. Choice of Data-sets
 
@@ -43,6 +43,7 @@ The dataset for this study is called *Amazon Review Data* [^2]. Particularly, si
 
 
 The first step will be data collection and data cleaning. The raw data-set is imported directly from data-set contributors' online storage *meta_Gift_Cards.json.gz* [^3] to Google Colab notebook. The raw database will be the following:
+
 
 
 
