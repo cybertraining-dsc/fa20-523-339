@@ -36,15 +36,14 @@ Recommendation Strategy is a quite popular research area in recent years with a 
 ## 3. Choice of Data-sets
 
 
-The dataset for this study is called *Amazon Review Data* [^2]. Particularly, since the dataset is now reach billions of amount,the subcategery gift card will be used as an example, since the overall product type is closed to 2000 and the amount of data retrieved is currently in the right amount of training and testing. This fact can help to perform User-Based Collaborative Filtering in a control timeline.
-
-
+The dataset for this study is called *Amazon Review Data* [^2]. Particularly, since the dataset is now reach billions of amount,the subcategery gift card will be used as an example, since the overall customer record is 1547 and the amount of data retrieved is currently in the right amount of training. This fact can help to perform User-Based Collaborative Filtering in a control timeline.
 
    
 ## 4. Data Preprocessing and cleaning
 
 
-The first step will be data collection and data cleaning. The raw data-set is imported directly from data-set contributors' online storage *meta_Gift_Cards.json.gz* [^3] to Google Colab notebook 
+The first step will be data collection and data cleaning. The raw data-set is imported directly from data-set contributors' online storage *meta_Gift_Cards.json.gz* [^3] to Google Colab notebook. The raw database will be the following:
+
 
 
 
@@ -65,7 +64,8 @@ The author would like to thank Dr. Gregor Von Laszewski, Dr. Geoffrey Fox, and t
 
 ## 8. References
 
-[^1]: Build a Recommendation Engine With Collaborative Filtering. Ajitsaria, A. 2020.. <https://realpython.com/build-recommendation-engine-collaborative-filtering/>
+[^1]: Build a Recommendation Engine With Collaborative Filtering. Ajitsaria, A. 2020.. 
+      <https://realpython.com/build-recommendation-engine-collaborative-filtering/>
 
 [^2]: Justifying recommendations using distantly-labeled reviews and fined-grained aspects. Jianmo Ni, Jiacheng Li, Julian McAuley. Empirical Methods in Natural Language Processing (EMNLP), 2019.. <http://jmcauley.ucsd.edu/data/amazon/>
 
