@@ -82,17 +82,17 @@ A shortcut for the *Asin Dictionary* is like the following:
 
 Then the data contained in the each record's attributes: **also_view** & **also_buy** will be reformated as following:
 
-![image info](./images/also_view List.png)
+![image info](./images/also_view\ List.png)
 
-![image info](./images/also_buy List.png)
+![image info](./images/also_buy\ List.png)
 
 A dictionary of the asin's relationship with particular record in also_view is recorded. An example from item 2000 to 2020 is showingas following.
 
-![image info](./images/also_view Dictionary.png)
+![image info](./images/also_view\ Dictionary.png)
 
 A dictionary of the asin's relationship with particular record in also_buy is also recorded. An example from item 2000 to 2020 is showingas following.
 
-![image info](./images/also_buy Dictionary.png)
+![image info](./images/also_buy\ Dictionary.png)
 
 ## 5. Recommendation Rate and Similarity Calculation
 
@@ -100,7 +100,7 @@ This section will be addressed upon project completion.
 
 ![image info](./images/matrix.png)
 
-![image info](./images/similarity table.png)
+![image info](./images/similarity\ table.png)
 
 ## 6. Conclusion
 
