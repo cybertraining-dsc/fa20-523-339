@@ -76,9 +76,11 @@ Here is a shortcut for the raw database:
 
 For the training purpose, all asins appeared in the dataset, either from *also_buy & also_view* list or * asin* have to be reformatted from alphabet character to numeric character. Therefore, a reformat_asin function is called for reformatting all the asins appeared in the dataset and is performed as a dictionary. 
 
-A shortcut for the *Asin Dictionary* is like the following:
+A shortcut for the *Asin Dictionary* is shown in Figure 2.
 
-![image info](https://github.com/cybertraining-dsc/fa20-523-339/blob/main/project/images/asin_dictionary.png)
+![image info](https://github.com/cybertraining-dsc/fa20-523-339/raw/main/project/images/asin_dictionary.png)
+
+**Figure 2:** Caption todo
 
 Then the data contained in the each record's attributes: **also_view** & **also_buy** will be reformated as following:
 
