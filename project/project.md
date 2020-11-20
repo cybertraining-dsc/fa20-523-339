@@ -1,6 +1,5 @@
 # Big Data Application in E-commerce
 
-- [x] please use refernces
 - [ ] Please add an empty line after a heading
 - [ ] please follow oure template, see image inclusions, fix errors reported by report check script
 
