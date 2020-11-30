@@ -1,7 +1,7 @@
 # Big Data Application in E-commerce
 
-- [ ] Please add an empty line after a heading
-- [ ] please follow oure template, see image inclusions, fix errors reported by report check script
+- [X] Please add an empty line after a heading
+- [X] please follow oure template, see image inclusions, fix errors reported by report check script
 
 [![Check Report](https://github.com/cybertraining-dsc/fa20-523-339/workflows/Check%20Report/badge.svg)](https://github.com/cybertraining-dsc/fa20-523-339/actions)
 [![Status](https://github.com/cybertraining-dsc/fa20-523-312/workflows/Status/badge.svg)](https://github.com/cybertraining-dsc/fa20-523-339/actions)
@@ -43,7 +43,7 @@ The dataset for this study is called *Amazon Review Data* [^2]. Particularly, si
 ## 4. Data Preprocessing and cleaning
 
 
-The first step will be data collection and data cleaning. The raw data-set is imported directly from data-set contributors' online storage *meta_Gift_Cards.json.gz* [^3] to Google Colab notebook. The raw database retreived directly from the website will be the following:
+The first step will be data collection and data cleaning. The raw data-set is imported directly from data-set contributors' online storage *meta_Gift_Cards.json.gz* [^3] to Google Colab notebook. The raw database retreived directly from the website will be shown as table 1.
 
 
 |  Attribute   | Description                    |  Example                                |
@@ -67,52 +67,118 @@ The first step will be data collection and data cleaning. The raw data-set is im
 |  price       | price of the product           |""                                       |
 |  **asin**    | product asin code              |"B001BKEWF2"                             |
 
+**Table 1:** The description for the dataset
+
 Here since the attributes *category*, *main_cat* are the same for the whole dataset,they will not be a valid training labels. The attributes *tech1*, *fit*, *tech2*, *rank*, *similar_item*, *date*, *price*  have no/ extremely less filled in. That made them also unvalid for being training labels.The attributes *image*, *description* and *feature* is unique per item and hard to find the similarity in numeric purpose and then hard to be used as labels. Therefore, only attributes **also_buy**,  **also_view**, **asin** is trained as attributes and label in this algorithm.
 
-Here is a shortcut for the raw database:
+Figure 1 is a shortcut for the raw database:
+```
+THE RAW DATABASE 
+The size of DATABASE : 1547
+                                                      0
+0     {"category": ["Gift Cards", "Gift Cards"], "te...
+1     {"category": ["Gift Cards", "Gift Cards"], "te...
+2     {"category": ["Gift Cards", "Gift Cards"], "te...
+3     {"category": ["Gift Cards", "Gift Cards"], "te...
+4     {"category": ["Gift Cards", "Gift Cards"], "te...
+...                                                 ...
+1542  {"category": ["Gift Cards", "Gift Cards"], "te...
+1543  {"category": ["Gift Cards", "Gift Cards"], "te...
+1544  {"category": ["Gift Cards", "Gift Cards"], "te...
+1545  {"category": ["Gift Cards", "Gift Cards"], "te...
+1546  {"category": ["Gift Cards", "Gift Cards"], "te...
 
-![image info](https://github.com/cybertraining-dsc/fa20-523-339/blob/main/project/images/raw_database.png)
+[1547 rows x 1 columns]
+```
+**Figure 1:** The raw database
 
-For the training purpose, all asins appeared in the dataset, either from *also_buy & also_view* list or * asin* have to be reformatted from alphabet character to numeric character. Therefore, a reformat_asin function is called for reformatting all the asins appeared in the dataset and is performed as a dictionary. 
+For the training purpose, all asins appeared in the dataset, either from *also_buy & also_view* list or * asin* have to be reformatted from alphabet character to numeric character. For example, the original label for a particular item may called **B001BKEWF2**, it will now be reformatted to numeric number as 0. In that case, it can be better fit-in the next step training method and easy to track. This step will be essential since it will help the also_view and also_buy dataset to be reformmated and make sure they are reformmed in track without overlapping each other. Therefore, a reformat_asin function is called for reformatting all the asins appeared in the dataset and is performed as a dictionary. 
 
 A shortcut for the *Asin Dictionary* is shown in Figure 2.
-
-![image info](https://github.com/cybertraining-dsc/fa20-523-339/raw/main/project/images/asin_dictionary.png)
-
 ```
-KLM: Plane
-XYZ: ABC
+The 4561  Lines of Reformatted ASIN reference dictionary as following.
+{'B001BKEWF2': 0, 'B001GXRQW0': 1, 'B001H53QE4': 2, 'B001H53QEO': 3, 'B001KMWN2K': 4, 'B001M1UVQO': 5, 'B001M1UVZA': 6, 'B001M5GKHE': 7, 'B002BSHDJK': 8, 'B002DN7XS4': 9, 'B002H9RN0C': 10, 'B002MS7BPA': 11, 'B002NZXF9S': 12, 'B002O018DM': 13, 'B002O0536U': 14, 'B002OOBESC': 15, 'B002PY04EG': 16, 'B002QFXC7U': 17, 'B002QTM0Y2': 18, 'B002QTPZUI': 19, 'B002SC9DRO': 20, 'B002UKLD7M': 21, 'B002VFYGC0': 22, 'B002VG4AR0': 23, 'B002VG4BRO': 24, 'B002W8YL6W': 25, 'B002XNLC04': 26, 'B002XNOVDE': 27, 'B002YEWXZ0': 28, 'B002YEWXMI': 29, 'B003755QI6': 30, 'B003CMYYGY': 31, 'B003NALDC8': 32, 'B003XNIBTS': 33, 'B003ZYIKDM': 34, 'B00414Y7Y6': 35, 'B0046IIHMK': 36, 'B004BVCHDC': 37, 'B004CG61UQ': 38, 'B004CZRZKW': 39, 'B004D01QJ2': 40, 'B004KNWWPE': 41, 'B004KNWWP4': 42, 'B004KNWWR2': 43, 'B004KNWWRC': 44, 'B004KNWWT0': 45, 'B004KNWWRW': 46, 'B004KNWWQ8': 47, 'B004KNWWNG': 48, 'B004KNWWPO': 49, 'B004KNWWXQ': 50, 'B004KNWWUE': 51, 'B004KNWWYU': 52, 'B004KNWWWC': 53, 'B004KNWX3A': 54, 'B004KNWX1W': 55, 'B004KNWWZE': 56, 'B004KNWWSQ': 57, 'B004KNWX4Y': 58, 'B004KNWX12': 59, 'B004KNWX3U': 60, 'B004KNWX62': 61, 'B004KNWX2Q': 62, 'B004KNWX6C': 63...}
 ```
-
-**Figure 2:** Caption todo
+**Figure 2:** The ASIN dictionary
 
 Then the data contained in the each record's attributes: **also_view** & **also_buy** will be reformated as following:
+```
+also_view List: The first 10 lines
+Item  0 :  []
+Item  1 :  [2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025]
+Item  2 :  [2026, 2027, 2028, 2029, 2030, 2031, 2032, 2033, 2034, 2035, 922, 2036, 283, 2037, 2038, 2001, 2000, 2013, 2039, 2040, 2007, 2041, 2042, 2009, 1233, 2043, 2014, 234, 2044, 2012, 2005, 2045, 2046, 2002, 2047, 378, 2048, 1382, 2008, 2004, 2011, 2049, 2050, 2051, 2052, 2003, 2053, 2054, 2018, 2055, 2056]
+Item  3 :  []
+Item  4 :  []
+Item  5 :  []
+Item  6 :  []
+Item  7 :  []
+Item  8 :  []
+Item  9 :  []
+Item  10 :  [2057, 2058, 2059]
+```
+**Figure 3:** The also_view list
 
-![image info](https://github.com/cybertraining-dsc/fa20-523-339/blob/main/project/images/also_view_List.png)
+```
+also_buy List: The first 20 lines
+Item  0 :  []
+Item  1 :  []
+Item  2 :  [2026, 2028, 2027, 2049, 1382, 2037, 2012, 2023]
+Item  3 :  []
+Item  4 :  []
+Item  5 :  []
+Item  6 :  []
+Item  7 :  []
+Item  8 :  [4224, 4225, 4226, 4227, 4228, 4229, 4230, 4231, 4232, 4233, 4234, 4235, 4236, 4237, 4238, 4239, 4240, 4241, 4242, 4243, 4244, 4245, 4246, 4247, 4248, 4249, 4250, 4251, 4252]
+Item  9 :  []
+Item  10 :  []
+```
+**Figure 4:** The also_buy list
 
-![image info](https://github.com/cybertraining-dsc/fa20-523-339/blob/main/project/images/also_buy_List.png)
+A dictionary of the asin's relationship with particular record in also_view is recorded. An example from item 2000 is showingas following.
+```
+also_view dictionary: use Item 2000 as an example
+Item  2000 :  [1, 2, 11, 12, 51, 60, 63, 65, 66, 67, 85, 86, 90, 94, 99, 100, 101, 103, 107, 108, 113, 116, 123, 126, 127, 129, 130, 141, 142, 143, 145, 146, 147, 148, 194, 199, 200, 204, 217, 221, 225, 229, 230, 231, 232, 233, 234, 235, 251, 253, 254, 260, 264, 268, 269, 270, 271, 280, 284, 285, 286, 287, 288, 294, 295, 296, 298, 299, 305, 306, 307, 308, 309, 313, 319, 327, 328, 338, 339, 344, 346, 348, 355, 356, 360, 371, 372, 377, 380, 389, 394, 406, 407, 410, 415, 440, 456, 469, 480, 490, 494, 495, 496, 502, 505, 509, 511, 512, 514, 517, 519, 520, 527, 530, 548, 591, 595, 600, 608, 609, 621, 631, 633, 670, 671, 672, 673, 675, 681, 689, 691, 695, 697, 707, 708, 709, 719, 783, 792, 793, 796, 797, 801, 803, 804, 807, 810, 816, 817, 818, 819, 836, 840, 842, 856, 892, 902, 913, 914, 917, 921, 955, 968, 972, 974, 975, 979, 981, 990, 991, 997, 998, 999, 1000, 1001, 1003, 1005, 1006, 1007, 1010, 1011, 1014, 1015, 1017, 1018, 1023, 1024, 1026, 1027, 1028, 1031, 1032, 1035, 1037, 1038, 1039, 1040, 1042, 1043, 1050, 1069, 1070, 1084, 1114, 1115, 1116, 1117, 1119, 1143, 1153, 1171, 1175, 1192, 1197, 1198, 1199, 1200, 1201, 1202, 1203, 1204, 1205, 1207, 1208, 1213, 1217, 1218, 1220, 1222, 1233, 1236, 1238, 1242, 1244, 1245, 1246, 1249, 1251, 1258, 1268, 1270, 1280, 1285, 1289, 1290, 1292, 1295, 1315, 1318, 1319, 1324, 1328, 1330, 1333, 1336, 1341, 1345, 1346, 1347, 1348, 1352, 1359, 1361, 1365, 1366, 1373, 1378, 1384, 1389, 1394, 1395, 1396, 1403, 1405, 1406, 1407, 1414, 1415, 1417, 1418, 1419, 1420, 1423, 1424, 1426, 1427, 1430, 1431, 1432, 1433, 1434, 1437, 1443, 1453, 1454, 1455, 1457, 1458, 1462, 1463, 1464, 1467, 1468, 1469, 1470, 1472, 1474, 1475, 1477, 1478, 1480, 1481, 1482, 1486, 1488, 1492, 1496, 1497, 1498, 1499, 1500, 1501, 1504, 1505, 1506, 1508, 1509, 1512, 1513, 1514, 1515, 1523, 1530, 1533, 1537, 1539, 1546]
+```
+**Figure 5:** The also_view dictionary
 
-A dictionary of the asin's relationship with particular record in also_view is recorded. An example from item 2000 to 2020 is showingas following.
+A dictionary of the asin's relationship with particular record in also_buy is also recorded. An example from item 2000 is showingas following.
 
-![image info](https://github.com/cybertraining-dsc/fa20-523-339/blob/main/project/images/also_view_Dictionary.png)
-
-A dictionary of the asin's relationship with particular record in also_buy is also recorded. An example from item 2000 to 2020 is showingas following.
-
-![image info](https://github.com/cybertraining-dsc/fa20-523-339/blob/main/project/images/also_buy_Dictionary.png)
+```
+also_buy dictionary: use Item 2000 as an example
+Item  2000 :  [217, 231, 235, 236, 277, 284, 285, 286, 287, 306, 307, 308, 327, 359, 476, 482, 505, 583, 609, 719, 891, 922, 963, 1065, 1328, 1359, 1384, 1399, 1482, 1483, 1490, 1496, 1497, 1499, 1509, 1512, 1540]
+```
+**Figure 6:** The also_buy dictionary
 
 ## 5. Recommendation Rate and Similarity Calculation
 
 This section will be addressed upon project completion.
+```
+Item  0 :  [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ...]
+Item  1 :  [13.0, 52, 28, 13.0, 13.0, 13.0, 13.0, 13.0, 13.0, 13.0, 13.0, 2, 2, 13.0, 13.0, 13.0, 13.0, 13.0, 13.0, 13.0 ...]
+Item  2 :  [29.5, 28, 182, 29.5, 29.5, 29.5, 29.5, 29.5, 29.5, 29.5, 29.5, 4, 2, 29.5, 29.5, 29.5, 29.5, 29.5, 29.5, 29.5 ...]
+Item  3 :  [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ...]
+Item  4 :  [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ...]
+Item  5 :  [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ...]
+Item  6 :  [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ...]
+Item  7 :  [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ...]
+Item  8 :  [14.5, 14.5, 14.5, 14.5, 14.5, 14.5, 14.5, 14.5, 290, 14.5, 14.5, 14.5, 14.5, 14.5, 14.5, 14.5, 14.5, 14.5, 14.5, 14.5 ...]
+Item  9 :  [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ...]
+Item  10 :  [1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 6, 1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 1.5 ...]
+```
+**Figure 7:** The shortcut for the recommenation rate matrix
 
-![image info](https://github.com/cybertraining-dsc/fa20-523-339/blob/main/project/images/matrix.png)
+|item||0 |1. |2  |3  |4  |5  |6  |7. |...1547|
+|:-: |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+|0   |0. |0. |0.       |0. |0. |0. |0. |0. |0.| ...|	
+|1   |0. |0. |0.928569 |0. |0. |0. |0. |0. |0.873242|...|
+|2   |0. |0. |0.928569 |0. |0. |0. |0. |0. |0.| ...|
 
-![image info](https://github.com/cybertraining-dsc/fa20-523-339/blob/main/project/images/similarity_table.png)
+**table 2:** The shortcut for using consine similarity to address the recommendation result
 
 ## 6. Conclusion
 
 This section will be addressed upon project completion.
 
-![image info](./images/showcase.png)
 
 ## 7. Acknowledgements
 
