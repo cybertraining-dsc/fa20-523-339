@@ -165,7 +165,7 @@ Item  8 :  [14.5, 14.5, 14.5, 14.5, 14.5, 14.5, 14.5, 14.5, 290, 14.5, 14.5, 14.
 Item  9 :  [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ...]
 Item  10 :  [1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 6, 1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 1.5 ...]
 ```
-**Figure 7:** The shortcut for the recommenation rate matrix
+**Figure 7:** The shortcut for the consine_similarity recommenation rate matrix
 
 |item|0  |1. |2        |3  |4  |5  |6  |7. |8.      |...1547 |
 |:-: |:-:|:-:|:-:      |:-:|:-:|:-:|:-:|:-:|:-:     |:-:     |
@@ -179,7 +179,17 @@ Item  10 :  [1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 6, 1.5, 1.5, 1.5,
 
 This section will be addressed upon project completion.
 
+![image info](https://github.com/cybertraining-dsc/fa20-523-339/raw/main/project/images/CosVSEuc.jpeg)
 
+**Figure 8:** The Cosine similarity and Euclidean Distance Accuracy Comparison
+
+![image info](https://github.com/cybertraining-dsc/fa20-523-339/raw/main/project/images/bothrightandwrong.jpeg)
+
+**Figure 9:** The bothright and bothwrong accuracy comparison
+
+![image info](https://github.com/cybertraining-dsc/fa20-523-339/raw/main/project/images/timecompare.jpeg)
+
+**Figure 10:** The Cosine Similarity and Euclidean Distance Time Comparison
 ## 7. Acknowledgements
 
 
