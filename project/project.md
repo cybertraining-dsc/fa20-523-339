@@ -150,8 +150,15 @@ Item  2000 :  [217, 231, 235, 236, 277, 284, 285, 286, 287, 306, 307, 308, 327, 
 **Figure 6:** The also_buy dictionary
 
 ## 5. Recommendation Rate and Similarity Calculation
+In this algorithm, there are two types of similarity methods: **Cosine Similarity** and **Euclidean Distance** Similarity that perform the similarity calculation. The first step before calculating the similarity would be phrasing the recommendation rate for each item to another item. The **Figure 7** is a short for the recoomendation rate matrix. It will use the logic in the following:
 
-This section will be addressed upon project completion.
+```
+If it is the case Item 2 appears in the also_like record of Item 1, the similarity score will be added on 2.
+If it is the case Item 2 appears in the also_buy record of Item 1, the similarity score will be added on 5.
+If it is the case Item 2 appears in both records, the similarity score will be added on 7.
+Otherwise the mean value will be assigned to the similarity score.
+```
+
 ```
 Item  0 :  [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ...]
 Item  1 :  [13.0, 52, 28, 13.0, 13.0, 13.0, 13.0, 13.0, 13.0, 13.0, 13.0, 2, 2, 13.0, 13.0, 13.0, 13.0, 13.0, 13.0, 13.0 ...]
@@ -165,7 +172,7 @@ Item  8 :  [14.5, 14.5, 14.5, 14.5, 14.5, 14.5, 14.5, 14.5, 290, 14.5, 14.5, 14.
 Item  9 :  [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ...]
 Item  10 :  [1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 6, 1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 1.5 ...]
 ```
-**Figure 7:** The shortcut for the consine_similarity recommenation rate matrix
+**Figure 7:** The shortcut for recommenation rate matrix
 
 |item|0  |1. |2        |3  |4  |5  |6  |7. |8.      |...1547 |
 |:-: |:-:|:-:|:-:      |:-:|:-:|:-:|:-:|:-:|:-:     |:-:     |
