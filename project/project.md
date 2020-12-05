@@ -150,6 +150,7 @@ Item  2000 :  [217, 231, 235, 236, 277, 284, 285, 286, 287, 306, 307, 308, 327, 
 **Figure 6:** The also_buy dictionary
 
 ## 5. Recommendation Rate and Similarity Calculation
+
 In this algorithm, there are two types of similarity methods: **Cosine Similarity** and **Euclidean Distance** Similarity that perform the similarity calculation. The first step before calculating the similarity would be phrasing the recommendation rate for each item to another item. The **Figure 7** is a short for the recoomendation rate matrix. It will use the logic in the following:
 
 ```
