@@ -1,7 +1,7 @@
 # Big Data Application in E-commerce
 
-- [ ] A conclusion can not have any images in it, you need to have a section before that in which you discuss your results
-- [ ] Wikipedia image is plagiarized as citation in caption missing.
+- [X] Please add an empty line after a heading
+- [X] please follow oure template, see image inclusions, fix errors reported by report check script
 
 [![Check Report](https://github.com/cybertraining-dsc/fa20-523-339/workflows/Check%20Report/badge.svg)](https://github.com/cybertraining-dsc/fa20-523-339/actions)
 [![Status](https://github.com/cybertraining-dsc/fa20-523-312/workflows/Status/badge.svg)](https://github.com/cybertraining-dsc/fa20-523-339/actions)
@@ -187,7 +187,7 @@ The first similarity method implemented is *Cosine Similarity* [^4].It will use 
 
 ![image info](https://wikimedia.org/api/rest_v1/media/math/render/svg/1d94e5903f7936d3c131e040ef2c51b473dd071d)
 
-**Figure 9:** The cosine similarity 
+**Figure 9:** The cosine similarity
 
 |item|0  |1. |2        |3  |4  |5  |6  |7. |8.      |...1547 |
 |:-: |:-:|:-:|:-:      |:-:|:-:|:-:|:-:|:-:|:-:     |:-:     |
@@ -197,7 +197,7 @@ The first similarity method implemented is *Cosine Similarity* [^4].It will use 
 
 **table 2:** The shortcut for using consine similarity to address the recommendation result
 
-
+The second similarity method implemented is *Euclidean Distance Similarity*[^5]. It will use Euclidean Distance to calculate the distance between each similarity
 
 ## 6. Conclusion
 
