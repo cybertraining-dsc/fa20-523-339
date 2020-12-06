@@ -164,7 +164,6 @@ for item in the asin list:
     each item in the also_view_dict[asin]'s score will be also increase 10
 for other scores which is currently 0, assigned the average value for it
 return the overall matrix for the further step
-   
 ```
 **Figure 7:** The sudocode for giving the recommendation rate for the likelyhood of the next purchase item based the current purchase
 
@@ -185,7 +184,7 @@ Item  10 :  [1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 6, 1.5, 1.5, 1.5,
 
 The first similarity method implemented is *Cosine Similarity* [^4].It will use the cosine of the angle between vectors(see **Figure 9**) to address the similarity between different items. By implementing this method with *sklearn.metrics.pairwise* package, it will rephrase the whole recommendation similarity as **table 2**. 
 
-![image info](https://wikimedia.org/api/rest_v1/media/math/render/svg/1d94e5903f7936d3c131e040ef2c51b473dd071d)
+![image info](https://github.com/cybertraining-dsc/fa20-523-339/raw/main/project/images/cosine-similarity.png)
 
 **Figure 9:** The cosine similarity
 
@@ -197,7 +196,18 @@ The first similarity method implemented is *Cosine Similarity* [^4].It will use 
 
 **table 2:** The shortcut for using consine similarity to address the recommendation result
 
-The second similarity method implemented is *Euclidean Distance Similarity*[^5]. It will use Euclidean Distance to calculate the distance between each similarity
+The second similarity method implemented is *Euclidean Distance Similarity*[^5]. It will use Euclidean Distance to calculate the distance between each items as a way to calculate similarity (see **Figure 10**). By implementing this method with *scipy.spatial.distance_matrix* package, it will rephrase the whole recommendation similarity. **Figure 11** is an example with the item 1.
+
+![image info](https://github.com/cybertraining-dsc/fa20-523-339/raw/main/project/images/euclidean.png)
+**Figure 10**
+
+```
+Item  1 :  [1005.70671669    0.         1370.09142031 1005.70671669 1005.70671669
+ 1005.70671669 1005.70671669 1005.70671669  710.89169358 1005.70671669
+  905.23339532  862.88933242  971.0745337  1005.70671669 1005.70671669
+ 1005.70671669 1005.70671669 1005.70671669 1005.70671669 1005.70671669...]
+```
+**Figure 11:** The Euclidean Distance similarity example of item 1
 
 ## 6. Conclusion
 
@@ -205,15 +215,15 @@ This section will be addressed upon project completion.
 
 ![image info](https://github.com/cybertraining-dsc/fa20-523-339/raw/main/project/images/CosVSEuc.jpeg)
 
-**Figure 10:** The Cosine similarity and Euclidean Distance Accuracy Comparison
+**Figure 11:** The Cosine similarity and Euclidean Distance Accuracy Comparison
 
 ![image info](https://github.com/cybertraining-dsc/fa20-523-339/raw/main/project/images/bothrightandwrong.jpeg)
 
-**Figure 11:** The bothright and bothwrong accuracy comparison
+**Figure 12:** The bothright and bothwrong accuracy comparison
 
 ![image info](https://github.com/cybertraining-dsc/fa20-523-339/raw/main/project/images/timecompare.jpeg)
 
-**Figure 12:** The Cosine Similarity and Euclidean Distance Time Comparison
+**Figure 13:** The Cosine Similarity and Euclidean Distance Time Comparison
 
 ## 7. Acknowledgements
 
