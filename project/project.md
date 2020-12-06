@@ -1,7 +1,6 @@
 # Big Data Application in E-commerce
 
-- [X] Please add an empty line after a heading
-- [X] please follow oure template, see image inclusions, fix errors reported by report check script
+- [ ] A conclusion can not have any images in it, you need to have a section before that in which you discuss your results
 
 [![Check Report](https://github.com/cybertraining-dsc/fa20-523-339/workflows/Check%20Report/badge.svg)](https://github.com/cybertraining-dsc/fa20-523-339/actions)
 [![Status](https://github.com/cybertraining-dsc/fa20-523-312/workflows/Status/badge.svg)](https://github.com/cybertraining-dsc/fa20-523-339/actions)
