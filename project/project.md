@@ -1,6 +1,7 @@
 # Big Data Application in E-commerce
 
 - [ ] A conclusion can not have any images in it, you need to have a section before that in which you discuss your results
+- [ ] Wikipedia image is plagiarized as citation in caption missing.
 
 [![Check Report](https://github.com/cybertraining-dsc/fa20-523-339/workflows/Check%20Report/badge.svg)](https://github.com/cybertraining-dsc/fa20-523-339/actions)
 [![Status](https://github.com/cybertraining-dsc/fa20-523-312/workflows/Status/badge.svg)](https://github.com/cybertraining-dsc/fa20-523-339/actions)
@@ -185,7 +186,8 @@ Item  10 :  [1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 6, 1.5, 1.5, 1.5,
 The first similarity method implemented is *Cosine Similarity* [^4].It will use the cosine of the angle between vectors(see **Figure 9**) to address the similarity between different items. By implementing this method with *sklearn.metrics.pairwise* package, it will rephrase the whole recommendation similarity as **table 2**. 
 
 ![image info](https://wikimedia.org/api/rest_v1/media/math/render/svg/1d94e5903f7936d3c131e040ef2c51b473dd071d)
-**Figure 9:** The cosine similarity
+
+**Figure 9:** The cosine similarity 
 
 |item|0  |1. |2        |3  |4  |5  |6  |7. |8.      |...1547 |
 |:-: |:-:|:-:|:-:      |:-:|:-:|:-:|:-:|:-:|:-:     |:-:     |
