@@ -199,7 +199,8 @@ The first similarity method implemented is *Cosine Similarity* [^4].It will use 
 The second similarity method implemented is *Euclidean Distance Similarity*[^5]. It will use Euclidean Distance to calculate the distance between each items as a way to calculate similarity (see **Figure 10**). By implementing this method with *scipy.spatial.distance_matrix* package, it will rephrase the whole recommendation similarity. **Figure 11** is an example with the item 1.
 
 ![image info](https://github.com/cybertraining-dsc/fa20-523-339/raw/main/project/images/euclidean.png)
-**Figure 10**
+
+**Figure 10** The Euclidean Distance calculation
 
 ```
 Item  1 :  [1005.70671669    0.         1370.09142031 1005.70671669 1005.70671669
