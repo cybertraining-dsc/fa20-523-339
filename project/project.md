@@ -183,6 +183,8 @@ Item  10 :  [1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 6, 1.5, 1.5, 1.5,
 ```
 **Figure 8:** The shortcut for recommenation rate matrix
 
+The first similarity method implemented is [^4]
+
 |item|0  |1. |2        |3  |4  |5  |6  |7. |8.      |...1547 |
 |:-: |:-:|:-:|:-:      |:-:|:-:|:-:|:-:|:-:|:-:     |:-:     |
 |0   |0. |0. |0.       |0. |0. |0. |0. |0. |0.      | ...    |	
@@ -214,13 +216,18 @@ The author would like to thank Dr. Gregor Von Laszewski, Dr. Geoffrey Fox, and t
 
 ## 8. References
 
-[^1]: Build a Recommendation Engine With Collaborative Filtering Ajitsaria, A 2020 
+[^1]: Build a Recommendation Engine With Collaborative Filtering. Ajitsaria, A. 2020 
       <https://realpython.com/build-recommendation-engine-collaborative-filtering/> 
 
 [^2]: Justifying recommendations using distantly-labeled reviews and fined-grained aspects. Jianmo Ni, Jiacheng Li, Julian McAuley. Empirical Methods in Natural Language Processing (EMNLP), 2019 <http://jmcauley.ucsd.edu/data/amazon/> 
 
 [^3]: meta_Gift_Cards.json.gz <http://deepyeti.ucsd.edu/jianmo/amazon/metaFiles/meta_Gift_Cards.json.gz>
 
+[^4]: Recommendation Systems : User-based Collaborative Filtering using N Nearest Neighbors. Ashay Pathak. 2019
+<https://medium.com/sfu-cspmp/recommendation-systems-user-based-collaborative-filtering-using-n-nearest-neighbors-bf7361dc24e0>
 
+
+[^5]: Similarity and Distance Metrics for Data Science and Machine Learning. Gonzalo Ferreiro Volpi. 2019
+<https://medium.com/dataseries/similarity-and-distance-metrics-for-data-science-and-machine-learning-e5121b3956f8>
 
 
