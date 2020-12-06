@@ -219,6 +219,7 @@ The accuracy for the consine_similarity and euclidean distance similarity with t
 **Figure 13:** The bothright and bothwrong accuracy comparison
 
 ## 7. Benchmark
+
 The Benchmark for each step for the project is stated in **Figure 14** The overall Time spent is affordable. The accuracy calculation part(57s) and the Euclidean Distance algorithm implementation(74s) have taken the majority of time for the running. The Accuracy time consumed would be considered proper since it will randomly assign one to ten items and perform recommendation items based on it. The time spent is necessary and should be considered normal. The Euclidean Distance algorithm would be considered making sense since it is trying to perform the difference in two 1547X1547 matrixs. 
 
 |Name                                                 | Status   |   Time | 
@@ -246,9 +247,9 @@ The time comparison for Cosine Similarity and Euclidean Distance Time Comparison
 
 
 ## 8.Conclusion
-This project *Big_tata_Application_in_E_commense.ipynb* [^6] is attempted to get a taste of the recommendation strategy based on *User-Based Collaborative Filtering*. Based on this attemption, the two similarity methods: **Cosine Similarity** and **Euclidean Distance** are addressed. After analyzing accuracy and time consumption for each method, Cosine Similarity performed better in both the accuracy and implementation time. Therefore the cosine similarity method is recommended to use in the recommendation algorithm strategies.
-This project should be aware of Limitations. Since the rating attribute is missing in the dataset, the recommendation rate was assigned by the author. Therefore, in real-world implementation, both methods' accuracy can be expected to be higher than in this project. Besides, the cross-section recommendation strategies are not implemented. This project is only focused on the gift card section recommendations. With the multiple aspects of goods customer purchases addressed, both methods' accuracy can also be expected to be higher.  
 
+This project *Big_tata_Application_in_E_commense.ipynb* [^6] is attempted to get a taste of the recommendation strategy based on *User-Based Collaborative Filtering*. Based on this attemption, the two similarity methods: **Cosine Similarity** and **Euclidean Distance** are addressed. After analyzing accuracy and time consumption for each method, Cosine Similarity performed better in both the accuracy and implementation time. Therefore the cosine similarity method is recommended to use in the recommendation algorithm strategies.
+This project should be aware of Limitations. Since the rating attribute is missing in the dataset, the recommendation rate was assigned by the author. Therefore, in real-world implementation, both methods' accuracy can be expected to be higher than in this project. Besides, the cross-section recommendation strategies are not implemented. This project is only focused on the gift card section recommendations. With the multiple aspects of goods customer purchases addressed, both methods' accuracy can also be expected to be higher.
 
 ## 9. Acknowledgements
 
