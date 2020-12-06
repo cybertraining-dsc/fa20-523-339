@@ -101,7 +101,8 @@ The 4561  Lines of Reformatted ASIN reference dictionary as following.
 ```
 **Figure 2:** The ASIN dictionary
 
-Then the data contained in the each record's attributes: **also_view** & **also_buy** will be reformated as following:
+Then the data contained in the each record's attributes: **also_view** & **also_buy** will be reformated as **Figure 3** and **Figure 4**. **Figure 3** is about the also_view item in reformatted numeric numbers based on each item customer purchased. **Figure 4** is about the also_buy item in reformatted numeric numbers based on each item customer purchased.
+
 ```
 also_view List: The first 10 lines
 Item  0 :  []
@@ -134,14 +135,12 @@ Item  10 :  []
 ```
 **Figure 4:** The also_buy list
 
-A dictionary of the asin's relationship with particular record in also_view is recorded. An example from item 2000 is showingas following.
+While the also_buy list and also_view list is addressed. It is also important to know how many times a particular item appeared in other items' also view list and also buy list. These dictionaries will help to calculate the recommendation rate later.  **Figure 5** and **Figure 6** is an example for how many times item 2000 appeared in other item's also_view and also_buy lists.
 ```
 also_view dictionary: use Item 2000 as an example
 Item  2000 :  [1, 2, 11, 12, 51, 60, 63, 65, 66, 67, 85, 86, 90, 94, 99, 100, 101, 103, 107, 108, 113, 116, 123, 126, 127, 129, 130, 141, 142, 143, 145, 146, 147, 148, 194, 199, 200, 204, 217, 221, 225, 229, 230, 231, 232, 233, 234, 235, 251, 253, 254, 260, 264, 268, 269, 270, 271, 280, 284, 285, 286, 287, 288, 294, 295, 296, 298, 299, 305, 306, 307, 308, 309, 313, 319, 327, 328, 338, 339, 344, 346, 348, 355, 356, 360, 371, 372, 377, 380, 389, 394, 406, 407, 410, 415, 440, 456, 469, 480, 490, 494, 495, 496, 502, 505, 509, 511, 512, 514, 517, 519, 520, 527, 530, 548, 591, 595, 600, 608, 609, 621, 631, 633, 670, 671, 672, 673, 675, 681, 689, 691, 695, 697, 707, 708, 709, 719, 783, 792, 793, 796, 797, 801, 803, 804, 807, 810, 816, 817, 818, 819, 836, 840, 842, 856, 892, 902, 913, 914, 917, 921, 955, 968, 972, 974, 975, 979, 981, 990, 991, 997, 998, 999, 1000, 1001, 1003, 1005, 1006, 1007, 1010, 1011, 1014, 1015, 1017, 1018, 1023, 1024, 1026, 1027, 1028, 1031, 1032, 1035, 1037, 1038, 1039, 1040, 1042, 1043, 1050, 1069, 1070, 1084, 1114, 1115, 1116, 1117, 1119, 1143, 1153, 1171, 1175, 1192, 1197, 1198, 1199, 1200, 1201, 1202, 1203, 1204, 1205, 1207, 1208, 1213, 1217, 1218, 1220, 1222, 1233, 1236, 1238, 1242, 1244, 1245, 1246, 1249, 1251, 1258, 1268, 1270, 1280, 1285, 1289, 1290, 1292, 1295, 1315, 1318, 1319, 1324, 1328, 1330, 1333, 1336, 1341, 1345, 1346, 1347, 1348, 1352, 1359, 1361, 1365, 1366, 1373, 1378, 1384, 1389, 1394, 1395, 1396, 1403, 1405, 1406, 1407, 1414, 1415, 1417, 1418, 1419, 1420, 1423, 1424, 1426, 1427, 1430, 1431, 1432, 1433, 1434, 1437, 1443, 1453, 1454, 1455, 1457, 1458, 1462, 1463, 1464, 1467, 1468, 1469, 1470, 1472, 1474, 1475, 1477, 1478, 1480, 1481, 1482, 1486, 1488, 1492, 1496, 1497, 1498, 1499, 1500, 1501, 1504, 1505, 1506, 1508, 1509, 1512, 1513, 1514, 1515, 1523, 1530, 1533, 1537, 1539, 1546]
 ```
 **Figure 5:** The also_view dictionary
-
-A dictionary of the asin's relationship with particular record in also_buy is also recorded. An example from item 2000 is showingas following.
 
 ```
 also_buy dictionary: use Item 2000 as an example
@@ -151,14 +150,23 @@ Item  2000 :  [217, 231, 235, 236, 277, 284, 285, 286, 287, 306, 307, 308, 327, 
 
 ## 5. Recommendation Rate and Similarity Calculation
 
-In this algorithm, there are two types of similarity methods: **Cosine Similarity** and **Euclidean Distance** Similarity that perform the similarity calculation. The first step before calculating the similarity would be phrasing the recommendation rate for each item to another item. The **Figure 7** is a short for the recoomendation rate matrix. It will use the logic in the following:
+While all the dictionaries and attributes-label relationship is prepared in Part4, the recommendation rate calculation is addressed in this part. In this algorithm, there are two types of similarity methods: **Cosine Similarity** and **Euclidean Distance Similarity** that perform the similarity calculation. The first step before calculating the similarity would be phrasing the recommendation rate for each item to another item. The **Figure 8** is a shortcut for the recoomendation rate matrix. It will use the logic in **Figure 7**.
 
 ```
-If it is the case Item 2 appears in the also_like record of Item 1, the similarity score will be added on 2.
-If it is the case Item 2 appears in the also_buy record of Item 1, the similarity score will be added on 5.
-If it is the case Item 2 appears in both records, the similarity score will be added on 7.
-Otherwise the mean value will be assigned to the similarity score.
+for item in the asin list:
+  for asin in the also_view dictionary:
+    if asin is founded in also_view dictionary[item] list:
+        score for this item increase 2
+    each item in the also_view_dict[asin]'s score will be also increase 2
+  for asin in the also_view dictionary:
+    if asin is founded in also_view dictionary[item] list:
+        score for this item increase 10
+    each item in the also_view_dict[asin]'s score will be also increase 10
+for other scores which is currently 0, assigned the average value for it
+return the overall matrix for the further step
+   
 ```
+**Figure 7:** The sudocode for giving the recommendation rate for the likelyhood of the next purchase item based the current purchase
 
 ```
 Item  0 :  [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ...]
@@ -173,7 +181,7 @@ Item  8 :  [14.5, 14.5, 14.5, 14.5, 14.5, 14.5, 14.5, 14.5, 290, 14.5, 14.5, 14.
 Item  9 :  [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ...]
 Item  10 :  [1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 6, 1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 1.5 ...]
 ```
-**Figure 7:** The shortcut for recommenation rate matrix
+**Figure 8:** The shortcut for recommenation rate matrix
 
 |item|0  |1. |2        |3  |4  |5  |6  |7. |8.      |...1547 |
 |:-: |:-:|:-:|:-:      |:-:|:-:|:-:|:-:|:-:|:-:     |:-:     |
@@ -189,15 +197,16 @@ This section will be addressed upon project completion.
 
 ![image info](https://github.com/cybertraining-dsc/fa20-523-339/raw/main/project/images/CosVSEuc.jpeg)
 
-**Figure 8:** The Cosine similarity and Euclidean Distance Accuracy Comparison
+**Figure 9:** The Cosine similarity and Euclidean Distance Accuracy Comparison
 
 ![image info](https://github.com/cybertraining-dsc/fa20-523-339/raw/main/project/images/bothrightandwrong.jpeg)
 
-**Figure 9:** The bothright and bothwrong accuracy comparison
+**Figure 10:** The bothright and bothwrong accuracy comparison
 
 ![image info](https://github.com/cybertraining-dsc/fa20-523-339/raw/main/project/images/timecompare.jpeg)
 
-**Figure 10:** The Cosine Similarity and Euclidean Distance Time Comparison
+**Figure 11:** The Cosine Similarity and Euclidean Distance Time Comparison
+
 ## 7. Acknowledgements
 
 
