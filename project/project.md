@@ -183,7 +183,10 @@ Item  10 :  [1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 6, 1.5, 1.5, 1.5,
 ```
 **Figure 8:** The shortcut for recommenation rate matrix
 
-The first similarity method implemented is [^4]
+The first similarity method implemented is *Cosine Similarity* [^4].It will use the cosine of the angle between vectors(see **Figure 9**) to address the similarity between different items. By implementing this method with *sklearn.metrics.pairwise* package, it will rephrase the whole recommendation similarity as **table 2**. 
+
+![image info](https://wikimedia.org/api/rest_v1/media/math/render/svg/1d94e5903f7936d3c131e040ef2c51b473dd071d)
+**Figure 9:** The cosine similarity
 
 |item|0  |1. |2        |3  |4  |5  |6  |7. |8.      |...1547 |
 |:-: |:-:|:-:|:-:      |:-:|:-:|:-:|:-:|:-:|:-:     |:-:     |
@@ -193,21 +196,23 @@ The first similarity method implemented is [^4]
 
 **table 2:** The shortcut for using consine similarity to address the recommendation result
 
+
+
 ## 6. Conclusion
 
 This section will be addressed upon project completion.
 
 ![image info](https://github.com/cybertraining-dsc/fa20-523-339/raw/main/project/images/CosVSEuc.jpeg)
 
-**Figure 9:** The Cosine similarity and Euclidean Distance Accuracy Comparison
+**Figure 10:** The Cosine similarity and Euclidean Distance Accuracy Comparison
 
 ![image info](https://github.com/cybertraining-dsc/fa20-523-339/raw/main/project/images/bothrightandwrong.jpeg)
 
-**Figure 10:** The bothright and bothwrong accuracy comparison
+**Figure 11:** The bothright and bothwrong accuracy comparison
 
 ![image info](https://github.com/cybertraining-dsc/fa20-523-339/raw/main/project/images/timecompare.jpeg)
 
-**Figure 11:** The Cosine Similarity and Euclidean Distance Time Comparison
+**Figure 12:** The Cosine Similarity and Euclidean Distance Time Comparison
 
 ## 7. Acknowledgements
 
