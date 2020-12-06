@@ -14,7 +14,7 @@ Tao Liu, [fa20-523-339](https://github.com/cybertraining-dsc/fa20-523-339/), [Ed
 
 ## Abstract
 
-As a result of last twenty year's Internet development in the global, E-commerce industry is getting stronger and stronger. While customers enjoyed their convenient online purchase environment, the E-commerce see the potential for the data and information customer left during their online-shopping process. One fundamental usage for this information is to perform Recommendation Strategy to give customer potential products they would also like to purchase.  This report will try to build a User-Based Collaborative Filtering strategy to give customer recommendation products based on the database of previous customer purchase records. This report will start with an overview for the background and then an expansion for the dataset it chosen *Amazon Review Data*. After that each step for the code and step made in a corresponding file *Big_tata_Application_in_E_commense.ipynb* will be illustrated and the User-Based Collaborative Filtering strategy will be presented step by step.
+As a result of last twenty year's Internet development in the global, E-commerce industry is getting stronger and stronger. While customers enjoyed their convenient online purchase environment, the E-commerce see the potential for the data and information customer left during their online-shopping process. One fundamental usage for this information is to perform Recommendation Strategy to give customer potential products they would also like to purchase.  This report will try to build a User-Based Collaborative Filtering strategy to give customer recommendation products based on the database of previous customer purchase records. This report will start with an overview for the background and then an expansion for the dataset it chosen *Amazon Review Data*. After that each step for the code and step made in a corresponding file *Big_tata_Application_in_E_commense.ipynb* [^6] will be illustrated and the User-Based Collaborative Filtering strategy will be presented step by step.
 
 
 Contents
@@ -212,19 +212,42 @@ Item  1 :  [1005.70671669    0.         1370.09142031 1005.70671669 1005.7067166
 
 ## 6. Conclusion
 
-This section will be addressed upon project completion.
+The accuracy for the consine_similarity and euclidean distance similarity with the number of item already purchased is shown as **Figure 12**. Here the blue line represented the cosine similarity and the red line represented the euclidean distance similarity. As presented, with the more item joined as purchased, the less likely both similarity algorithm accurately locate the next item customer may want to purchase next. However, overall the consine_similarity performed better accuracy compared to euclidean distance similarity. In **Figure 13** , the both algorithm accurate number and both wrong number is addressed. The both wrong number changed dramatically after more already-purchased item joined. This fact convinces the prior statement, this algorithm works better when the given item is one, but can't handle with large number of purchased item. 
 
-![image info](https://github.com/cybertraining-dsc/fa20-523-339/raw/main/project/images/CosVSEuc.jpeg)
+![image info](https://github.com/cybertraining-dsc/fa20-523-339/raw/main/project/images/CosVSEuc.png)
 
-**Figure 11:** The Cosine similarity and Euclidean Distance Accuracy Comparison
+**Figure 12:** The Cosine similarity and Euclidean Distance Accuracy Comparison
 
-![image info](https://github.com/cybertraining-dsc/fa20-523-339/raw/main/project/images/bothrightandwrong.jpeg)
+![image info](https://github.com/cybertraining-dsc/fa20-523-339/raw/main/project/images/bothrightandwrong.png)
 
-**Figure 12:** The bothright and bothwrong accuracy comparison
+**Figure 13:** The bothright and bothwrong accuracy comparison
 
-![image info](https://github.com/cybertraining-dsc/fa20-523-339/raw/main/project/images/timecompare.jpeg)
+The Benchmark for each step for the project *Big_tata_Application_in_E_commense.ipynb* [^6] is stated in **Figure 14** The overall Time spent is affordable. The accuracy calculation part(57s) and the Euclidean Distance algorithm implementation(74s) have taken the majority time for the running. The Accuracy time consumed would be considered as proper since it will take random assigned one to ten items and perform recommendation item based on it. The time spent is necessary and should be considered as normal. The euclidean distance algorithm spent would be considered as making sense since it is trying to perform the different in two 1547X1547 matrixs. 
 
-**Figure 13:** The Cosine Similarity and Euclidean Distance Time Comparison
+|Name                                                 | Status   |   Time | 
+|:-:                                                  |:-:       |:-:     |
+| Data Online Downloading Process                     | ok       |  1.028 |
+| Raw Database                                        | ok       |  0.529 |
+| Database Reformatting process                       | ok       |  0.587 |
+| Recommendation Rate Calculation                     | ok       |  1.197 |
+| Consine_Similarity                                  | ok       |  0.835 |
+| Euclidean distance                                  | ok       | 73.895 |
+| Recommendation strategy showcase-Cosine_Similarity  | ok       |  0.003 |
+| Recommendation strategy showcase-Euclidean distance | ok       |  0.004 |
+| Accuracy                                            | ok       | 57.119 |
+| Showcase-Cosine_Similarity                          | ok       |  0.003 |
+| Showcase-Euclidean distance                         | ok       |  0.003 |
+
+
+**Figure 14:** Benchmark
+
+The time comparsion for Cosine Similarity and Euclidean Distance Time Comparsion is addressed in **Figure 15** As stated, the euclidean distance algorithm have taken much more time compared to cosine similarity. Therefore, the cosine similarity should be considered as efficient in these two similarites.
+
+![image info](https://github.com/cybertraining-dsc/fa20-523-339/raw/main/project/images/timecompare.png)
+
+**Figure 15:** The Cosine Similarity and Euclidean Distance Time Comparison
+
+Since Cosine Similarity performed better in both the accuracy and time of implementation, the cosine similarity method is recommeded to use in the recommendation algorithm strategies.
 
 ## 7. Acknowledgements
 
@@ -246,5 +269,7 @@ The author would like to thank Dr. Gregor Von Laszewski, Dr. Geoffrey Fox, and t
 
 [^5]: Similarity and Distance Metrics for Data Science and Machine Learning. Gonzalo Ferreiro Volpi. 2019
 <https://medium.com/dataseries/similarity-and-distance-metrics-for-data-science-and-machine-learning-e5121b3956f8>
+
+[^6]: Big_tata_Application_in_E_commense.ipynb <https://github.com/cybertraining-dsc/fa20-523-339/raw/main/project/Big_tata_Application_in_E_commense.ipynb>
 
 
