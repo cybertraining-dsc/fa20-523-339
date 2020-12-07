@@ -22,7 +22,7 @@ Contents
 
 {{% /pageinfo %}}
 
-**Keywords:** recommendation strategy,collaborative filtering, business, big data, E-commerce, customer behavior 
+**Keywords:** recommendation strategy,user-based, collaborative filtering, business, big data, E-commerce, customer behavior 
 
 ## 1. Introduction
 
