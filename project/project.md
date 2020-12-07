@@ -5,7 +5,7 @@
 
 [![Check Report](https://github.com/cybertraining-dsc/fa20-523-339/workflows/Check%20Report/badge.svg)](https://github.com/cybertraining-dsc/fa20-523-339/actions)
 [![Status](https://github.com/cybertraining-dsc/fa20-523-312/workflows/Status/badge.svg)](https://github.com/cybertraining-dsc/fa20-523-339/actions)
-Status: final
+Status: final, Type: Project
 
 Tao Liu, [fa20-523-339](https://github.com/cybertraining-dsc/fa20-523-339/), [Edit](https://github.com/cybertraining-dsc/fa20-523-339/blob/main/project/project.md)
 
