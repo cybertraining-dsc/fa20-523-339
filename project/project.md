@@ -1,4 +1,14 @@
-# Big Data Application in E-commerce
+---
+date: 2021-03-15
+title: Big Data Application in E-commerce
+linkTitle: E-commerce
+tags: ["project", "ai", "finance"]
+description: Big Data Application in E-commerce
+author: Tao Liu
+resources:
+- src: "**.{png,jpg}"
+  title: "Image #:counter"
+---
 
 [![Check Report](https://github.com/cybertraining-dsc/fa20-523-339/workflows/Check%20Report/badge.svg)](https://github.com/cybertraining-dsc/fa20-523-339/actions)
 [![Status](https://github.com/cybertraining-dsc/fa20-523-339/workflows/Status/badge.svg)](https://github.com/cybertraining-dsc/fa20-523-339/actions)
