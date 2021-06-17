@@ -3,9 +3,9 @@ date: 2021-03-15
 title: Big Data Application in E-commerce
 linkTitle: E-commerce
 tags: ["project", "ai", "finance"]
-description: "As a result of the last twenty year's Internet development globally, the E-commerce industry is getting stronger and stronger. While customers enjoyed their convenient online purchase environment, E-commerce sees the potential for the data and information customers left during their online shopping process. One fundamental usage for this information is to perform a Recommendation Strategy to give customers potential products they would also like to purchase.  This report will build a User-Based Collaborative Filtering strategy to provide customer recommendation products based on the database of previous customer purchase records. This report will start with an overview of the background and explain the dataset it chose *Amazon Review Data*. After that, each step for the code and step made in a corresponding file *Big_tata_Application_in_E_commense.ipynb* will be illustrated, and the User-Based Collaborative Filtering strategy will be presented step by step.
-"
+description: "As a result of the last twenty year's Internet development globally, the E-commerce industry is getting stronger and stronger. While customers enjoyed their convenient online purchase environment, E-commerce sees the potential for the data and information customers left during their online shopping process. One fundamental usage for this information is to perform a Recommendation Strategy to give customers potential products they would also like to purchase.  This report will build a User-Based Collaborative Filtering strategy to provide customer recommendation products based on the database of previous customer purchase records. This report will start with an overview of the background and explain the dataset it chose *Amazon Review Data*. After that, each step for the code and step made in a corresponding file *Big_tata_Application_in_E_commense.ipynb* will be illustrated, and the User-Based Collaborative Filtering strategy will be presented step by step."
 author: Tao Liu
+github_url: https://github.com/cybertraining-dsc/fa20-523-339/edit/main/project/project.md
 resources:
 - src: "**.{png,jpg}"
   title: "Image #:counter"
